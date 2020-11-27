@@ -6,7 +6,7 @@ public class ReversePolishNotation {
     private static Deque<String> helper = new ArrayDeque<>();
 
 
-    public static Deque<String> convertToReversePolishNotation(String initString){
+    public static Deque<String> convert(String initString){
 
         /*
          * parse string and deal with each token
@@ -55,7 +55,7 @@ public class ReversePolishNotation {
           * Reverse Polish Notation Algorithm on token
           *
           */
-        if (isNumeric(string)){
+        if (CheckIfNumeric.isNumeric(string)){
             /*
              * if number then push into the output stack
              *
@@ -110,14 +110,5 @@ public class ReversePolishNotation {
                 throw e;
             }
         }
-    }
-
-    private static boolean isNumeric(String string){
-        try{
-            Integer.parseInt(string);
-        } catch (Exception e){
-            return false;
-        }
-        return true;
     }
 }
