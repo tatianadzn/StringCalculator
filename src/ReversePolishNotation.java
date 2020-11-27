@@ -18,7 +18,7 @@ public class ReversePolishNotation {
         for(int i = 0; i < initString.length(); i++){
             char c = initString.charAt(i);
             int temp = 0;
-            while (c >= '0' && c <= '9'){
+            while (c > '0' && c <= '9'){
                 temp = temp * 10 + Character.digit(c, 10);
 
                 /*
